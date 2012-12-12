@@ -8,19 +8,51 @@ common:
 	nette:
 		application:
 			errorPresenter: Error
+			mapping:
+				*: App\*Module\*Presenter
 
 		session:
 			expiration: 14 days
 
+	extensions:
+		twBootstrapRenderer: Kdyby\Extension\Forms\BootstrapRenderer\DI\RendererExtension
+
 
 	services:
+		user: App\User
+		authenticator: @user
+		routerFactory: App\RouterFactory
+		router: @routerFactory::createRouter
 
 
 	factories:
 
 
+
 production < common:
 
 
-development < common:
 
+development < common:
+	nette:
+		application:
+			debugger: true
+
+		routing:
+			debugger: true
+
+		security:
+			debugger: true
+
+		container:
+			debugger: true
+
+		debugger:
+			email: filip@prochazka.su
+			strictMode: TRUE
+			browser: google-chrome
+
+		database:
+			dsn: 'mysql:host=127.0.0.1;dbname=app'
+			user: root
+			password: heslo

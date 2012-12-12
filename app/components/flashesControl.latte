@@ -1,0 +1,6 @@
+{snippet}
+<div n:foreach="$flashes as $flash" class="alert alert-{$flash->type}">
+	<a class="close" data-dismiss="alert" href="#">×</a>
+    {$flash->message}
+</div>
+{/snippet}

@@ -2,34 +2,42 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-<html>
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width">
-	<meta name="robots" content="{$robots}" n:ifset="$robots">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="">
+    <meta name="robots" content="{$robots}" n:ifset="$robots">
 
-	<title>{#title|striptags|strip}Nette Application Skeleton{/#}</title>
+    <title>{#title|striptags|strip|trim}Nette Framework application{/#}</title>
 
-	<link rel="stylesheet" media="screen,projection,tv" href="{$basePath}/css/screen.css">
-	<link rel="stylesheet" media="screen,projection,tv" href="{$basePath}/css/bootstrap.css">
-	<link rel="stylesheet" media="print" href="{$basePath}/css/print.css">
-	<link rel="shortcut icon" href="{$basePath}/favicon.ico">
+    <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <style>
+        @import url({$baseUrl}{='css/bootstrap.css'|mtime});
+        @import url({$baseUrl}{='css/screen.css'|mtime});
+    </style>
+    <link rel="stylesheet" media="print" href="{$basePath}{='css/print.css'|mtime}">
+    {#head}{/#}
+
+    {*{control ga "UA-XXX"}*}
 </head>
 <body>
-	<script> document.body.className+=' js' </script>
+    <div class="container" n:block="body">
+        {#flashMessages}{control flashes}{/#}
+        {include #content}
+    </div>
 
-	<div n:foreach="$flashes as $flash" class="flash {$flash->type}">{$flash->message}</div>
-
-	{include #content}
-
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="' + {$basePath} + '/js/jquery.js"><\/script>')</script>
-	<script src="{$basePath}/js/modernizr.js"></script>
-	<script src="{$basePath}/js/nette.js"></script>
-	<script src="{$basePath}/js/bootstrap.js"></script>
-	<script src="{$basePath}/js/main.js"></script>
+    {#scripts}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="' + {$basePath} + {='js/jquery.js'|mtime} + '"><\/script>')</script>
+    <script src="{$basePath}{='js/modernizr.js'|mtime}"></script>
+    <script src="{$basePath}{='js/bootstrap.js'|mtime}"></script>
+    <script src="{$basePath}{='js/nette.js'|mtime}"></script>
+    <script src="{$basePath}{='js/main.js'|mtime}"></script>
+    {*<script src="{$basePath}{='js/pie.js'|mtime}"></script>*}
+    {*<script src="{$basePath}{='js/upload.js'|mtime}"></script>*}
+    {/#}
 </body>
 </html>

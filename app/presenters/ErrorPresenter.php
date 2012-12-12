@@ -7,7 +7,7 @@ use Nette\Diagnostics\Debugger;
 /**
  * Error presenter.
  */
-class ErrorPresenter extends BasePresenter
+class ErrorPresenter extends \App\BasePresenter
 {
 
 	/**
