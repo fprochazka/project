@@ -1,5 +1,8 @@
 <?php
 
+namespace App;
+
+use Nette;
 use Nette\Diagnostics\Debugger;
 
 
@@ -7,7 +10,7 @@ use Nette\Diagnostics\Debugger;
 /**
  * Error presenter.
  */
-class ErrorPresenter extends \App\BasePresenter
+class ErrorPresenter extends BasePresenter
 {
 
 	/**
