@@ -17,6 +17,7 @@ abstract class BasePresenter extends Nette\Application\UI\Presenter
 	use Kdyby\AutowireProperties;
 
 
+
 	/**
 	 * @return FlashesControl
 	 */
