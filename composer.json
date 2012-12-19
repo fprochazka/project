@@ -1,24 +1,46 @@
 {
-	"name": "hosiplan/project",
-	"description": "Pre-packaged Nette Framework project, basic configured structure for your application.",
-	"license": ["BSD-3-Clause", "GPL-2.0", "GPL-3.0"],
-	"authors": [
-		{
-			"name": "Filip Procházka",
-			"homepage": "http://filip-prochazka.com"
-		},
-		{
-			"name": "David Grudl",
-			"homepage": "http://davidgrudl.com"
-		},
-		{
-			"name": "Nette Community",
-			"homepage": "https://github.com/nette/nette/contributors"
-		}
-	],
-	"require": {
-		"php": ">= 5.3.0",
+    "name": "hosiplan/project",
+    "description": "Pre-packaged Nette Framework project, basic configured structure for your application.",
+    "license": ["BSD-3-Clause", "GPL-2.0", "GPL-3.0"],
+    "authors": [
+        {
+            "name": "Filip Procházka",
+            "homepage": "http://filip-prochazka.com"
+        },
+        {
+            "name": "David Grudl",
+            "homepage": "http://davidgrudl.com"
+        },
+        {
+            "name": "Nette Community",
+            "homepage": "https://github.com/nette/nette/contributors"
+        }
+    ],
+    "require": {
+        "php": ">= 5.3.0",
+        "hosipLan/nette-autowire-properties": "0.*",
         "kdyby/bootstrap-form-renderer": "@dev"
-	},
-	"minimum-stability":"dev"
+    },
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "hosipLan/nette-autowire-properties",
+                "version": "0.1",
+                "dist": {
+                    "url": "https://github.com/HosipLan/Nette-AutowireProperties/archive/v0.1.zip",
+                    "type": "zip"
+                },
+                "source": {
+                    "type": "git",
+                    "url": "git://github.com/HosipLan/Nette-AutowireProperties.git",
+                    "reference": "v0.1"
+                },
+                "autoload": {
+                    "classmap": ["src/"]
+                }
+            }
+        }
+    ],
+    "minimum-stability":"dev"
 }
