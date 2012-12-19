@@ -1,5 +1,5 @@
-<script type="text/javascript">
-{#js|strip}
+<script type="text/javascript">{#js|strip}
+
     var _gaq = [['_setAccount', {$acc}], ['_setDomainName', {$domain}], ['_trackPageview']];
 
     (function () {
@@ -10,5 +10,10 @@
         var s = document.getElementsByTagName('script')[0];
         s.parentNode.insertBefore(ga, s);
     })();
-{/#}
-</script>
+
+    /* Google Analytics error catching */
+    window.onerror = function(message, file, lineNumber) {
+      _gaq.push(['_trackEvent', 'Javascript Error', file + ':' + lineNumber, message + '']);
+    };
+
+{/#}</script>
