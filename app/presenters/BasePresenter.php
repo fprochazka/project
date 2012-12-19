@@ -2,8 +2,8 @@
 
 namespace App;
 
+use Kdyby;
 use Nette;
-use Nette\Reflection\Property;
 
 
 /**
@@ -14,7 +14,7 @@ use Nette\Reflection\Property;
  */
 abstract class BasePresenter extends Nette\Application\UI\Presenter
 {
-	use \Kdyby\AutowireProperties;
+	use Kdyby\AutowireProperties;
 
 
 	/**
