@@ -21,7 +21,7 @@ SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(255) NOT NULL,
+  `username` varchar(255) DEFAULT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `is_active` tinyint(4) NOT NULL DEFAULT '0',
@@ -90,6 +90,9 @@ class User extends Nette\Security\User implements Security\IAuthenticator
 		}
 
 		unset($row->password);
+		if (empty($row->username)) {
+			$row->username = $row->email;
+		}
 		return new Security\Identity($row->id, $row->role ?: 'guest', $row->toArray());
 	}
 
@@ -109,7 +112,6 @@ class User extends Nette\Security\User implements Security\IAuthenticator
 		}
 
 		return $this->db->table('user')->insert(array(
-			'username' => substr($email, 0, strpos($email, '@')),
 			'email' => $email,
 			'password' => $password,
 			'is_active' => FALSE,
