@@ -18,29 +18,8 @@
     ],
     "require": {
         "php": ">= 5.3.0",
-        "hosipLan/nette-autowire-properties": "0.*",
+        "hosiplan/nette-autowire-properties": "*",
         "kdyby/bootstrap-form-renderer": "@dev"
     },
-    "repositories": [
-        {
-            "type": "package",
-            "package": {
-                "name": "hosipLan/nette-autowire-properties",
-                "version": "0.1",
-                "dist": {
-                    "url": "https://github.com/HosipLan/Nette-AutowireProperties/archive/v0.1.zip",
-                    "type": "zip"
-                },
-                "source": {
-                    "type": "git",
-                    "url": "git://github.com/HosipLan/Nette-AutowireProperties.git",
-                    "reference": "v0.1"
-                },
-                "autoload": {
-                    "classmap": ["src/"]
-                }
-            }
-        }
-    ],
     "minimum-stability":"dev"
 }
