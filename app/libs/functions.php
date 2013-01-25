@@ -37,7 +37,21 @@ function l($message) {
  * @return mixed
  */
 function bd($var, $title = NULL) {
-	return callback('Nette\Diagnostics\Debugger', 'barDump')->invokeArgs(func_get_args());
+	if (Debugger::$productionMode) { return $var; }
+
+	$trace = debug_backtrace();
+	$traceTitle = (isset($trace[1]['class']) ? htmlspecialchars($trace[1]['class']) . "->" : NULL) .
+		htmlspecialchars($trace[1]['function']) . '()' .
+		':' . $trace[0]['line'];
+
+	if (!is_scalar($title) && $title !== NULL) {
+		foreach (func_get_args() as $arg) {
+			Nette\Diagnostics\Debugger::barDump($arg, $traceTitle);
+		}
+		return $var;
+	}
+
+	return Nette\Diagnostics\Debugger::barDump($var, $title ?: $traceTitle);
 }
 
 
