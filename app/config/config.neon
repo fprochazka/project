@@ -1,9 +1,11 @@
 common:
 	parameters:
 
+
 	php:
 		date.timezone: Europe/Prague
 		# zlib.output_compression: yes
+
 
 	nette:
 		application:
@@ -14,13 +16,17 @@ common:
 		session:
 			expiration: 14 days
 
+
 	extensions:
-		twBootstrapRenderer: Kdyby\Extension\Forms\BootstrapRenderer\DI\RendererExtension
+		twBootstrapRenderer: Kdyby\BootstrapFormRenderer\DI\RendererExtension
+		console: Kdyby\Console\DI\ConsoleExtension
+		events: Kdyby\Events\DI\EventsExtension
+		doctrine: Kdyby\Doctrine\DI\OrmExtension
 
 
 	services:
-		user: App\User
-		authenticator: @user
+#		user: App\User
+#		authenticator: @user
 		routerFactory: App\RouterFactory
 		router: @routerFactory::createRouter
 
@@ -28,8 +34,19 @@ common:
 	factories:
 
 
+	doctrine:
+		host: 127.0.0.1
+		user: root
+		password: heslo
+		dbname: app
+
+
 
 production < common:
+	nette:
+		debugger:
+			email: filip@prochazka.su
+			strictMode: TRUE
 
 
 
@@ -48,11 +65,10 @@ development < common:
 			debugger: true
 
 		debugger:
-			email: filip@prochazka.su
 			strictMode: TRUE
 			browser: google-chrome
 
-		database:
-			dsn: 'mysql:host=127.0.0.1;dbname=app'
-			user: root
-			password: heslo
+#		database:
+#			dsn: 'mysql:host=127.0.0.1;dbname=visual-deploy'
+#			user: root
+#			password: heslo
