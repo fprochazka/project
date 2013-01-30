@@ -1,0 +1,634 @@
+{
+    "hash": "b4ce612ac8167d06e88f6887de0f8232",
+    "packages": [
+        {
+            "name": "doctrine/common",
+            "version": "2.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/common",
+                "reference": "2.3.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/doctrine/common/zipball/2.3.0",
+                "reference": "2.3.0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "time": "2012-09-19 22:55:18",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Doctrine\\Common": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com",
+                    "homepage": "http://www.jwage.com/"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com",
+                    "homepage": "http://www.instaclick.com"
+                },
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com",
+                    "homepage": "https://github.com/schmittjoh",
+                    "role": "Developer of wrapped JMSSerializerBundle"
+                }
+            ],
+            "description": "Common Library for Doctrine projects",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "collections",
+                "spl",
+                "eventmanager",
+                "annotations",
+                "persistence"
+            ]
+        },
+        {
+            "name": "doctrine/dbal",
+            "version": "2.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/dbal",
+                "reference": "2.3.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/doctrine/dbal/archive/2.3.2.zip",
+                "reference": "2.3.2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "doctrine/common": "2.3.*"
+            },
+            "time": "2013-01-07 20:03:43",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Doctrine\\DBAL": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com",
+                    "homepage": "http://www.jwage.com/"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com",
+                    "homepage": "http://www.instaclick.com"
+                },
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                }
+            ],
+            "description": "Database Abstraction Layer",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "database",
+                "persistence",
+                "dbal",
+                "queryobject"
+            ]
+        },
+        {
+            "name": "doctrine/orm",
+            "version": "2.3.2",
+            "source": {
+                "type": "git",
+                "url": "git://github.com/doctrine/doctrine2.git",
+                "reference": "2.3.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/doctrine/doctrine2/archive/2.3.2.zip",
+                "reference": "2.3.2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "ext-pdo": "*",
+                "doctrine/dbal": "2.3.*",
+                "symfony/console": "2.*"
+            },
+            "suggest": {
+                "symfony/yaml": "If you want to use YAML Metadata Mapping Driver"
+            },
+            "time": "2013-01-07 20:05:04",
+            "bin": [
+                "bin/doctrine",
+                "bin/doctrine.php"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Doctrine\\ORM": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com",
+                    "homepage": "http://www.jwage.com/"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com",
+                    "homepage": "http://www.instaclick.com"
+                },
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                }
+            ],
+            "description": "Object-Relational-Mapper for PHP",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "database",
+                "orm"
+            ]
+        },
+        {
+            "name": "hosiplan/nette-autowire-properties",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/HosipLan/Nette-AutowireProperties",
+                "reference": "v0.1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/HosipLan/Nette-AutowireProperties/archive/v0.1.1.zip",
+                "reference": "v0.1.1",
+                "shasum": ""
+            },
+            "require": {
+                "nette/nette": "*"
+            },
+            "time": "2012-12-21 13:52:10",
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0",
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Filip Procházka",
+                    "homepage": "http://filip-prochazka.com"
+                }
+            ],
+            "description": "Lazy-Autowire of properties for Nette PresenterComponents.",
+            "keywords": [
+                "nette"
+            ]
+        },
+        {
+            "name": "kdyby/bootstrap-form-renderer",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Kdyby/BootstrapFormRenderer",
+                "reference": "27f221f8775921c7dedd611b80a0df744a3199b4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/Kdyby/BootstrapFormRenderer/archive/27f221f8775921c7dedd611b80a0df744a3199b4.zip",
+                "reference": "27f221f8775921c7dedd611b80a0df744a3199b4",
+                "shasum": ""
+            },
+            "require": {
+                "nette/nette": "@dev"
+            },
+            "require-dev": {
+                "nette/tester": "@dev"
+            },
+            "time": "2013-01-24 16:57:33",
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Kdyby\\BootstrapFormRenderer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0",
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Filip Procházka",
+                    "homepage": "http://filip-prochazka.com"
+                }
+            ],
+            "description": "Nette forms renderer with bootstrap",
+            "homepage": "http://kdyby.org",
+            "keywords": [
+                "bootstrap",
+                "Forms",
+                "nette",
+                "kdyby"
+            ]
+        },
+        {
+            "name": "kdyby/console",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Kdyby/Console",
+                "reference": "dfbc3b766bbaeb849c5ee131272df05f18c6b176"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/Kdyby/Console/archive/dfbc3b766bbaeb849c5ee131272df05f18c6b176.zip",
+                "reference": "dfbc3b766bbaeb849c5ee131272df05f18c6b176",
+                "shasum": ""
+            },
+            "require": {
+                "nette/nette": "@dev",
+                "symfony/console": "2.1.*"
+            },
+            "require-dev": {
+                "nette/tester": "@dev"
+            },
+            "time": "2013-01-30 09:36:00",
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Kdyby\\Console\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0",
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Filip Procházka",
+                    "homepage": "http://filip-prochazka.com"
+                }
+            ],
+            "description": "Symfony Console integration for Kdyby components",
+            "homepage": "http://kdyby.org",
+            "keywords": [
+                "console",
+                "nette",
+                "kdyby"
+            ]
+        },
+        {
+            "name": "kdyby/doctrine",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Kdyby/Doctrine",
+                "reference": "ccbb30a1098dbe31576f62b78aeb842f8f920454"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/Kdyby/Doctrine/archive/ccbb30a1098dbe31576f62b78aeb842f8f920454.zip",
+                "reference": "ccbb30a1098dbe31576f62b78aeb842f8f920454",
+                "shasum": ""
+            },
+            "require": {
+                "nette/nette": "@dev",
+                "kdyby/events": "@dev",
+                "kdyby/console": "@dev",
+                "doctrine/orm": "2.3.*@stable"
+            },
+            "require-dev": {
+                "nette/tester": "@dev"
+            },
+            "time": "2013-01-27 23:50:20",
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Kdyby\\Doctrine\\": "src/",
+                    "Kdyby\\Persistence\\": "src/"
+                },
+                "classmap": [
+                    "src/Kdyby/Doctrine/exceptions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0",
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Filip Procházka",
+                    "homepage": "http://filip-prochazka.com"
+                }
+            ],
+            "description": "Doctrine integration into Nette Framework",
+            "homepage": "http://kdyby.org",
+            "keywords": [
+                "orm",
+                "dbal",
+                "doctrine",
+                "nette",
+                "kdyby"
+            ]
+        },
+        {
+            "name": "kdyby/events",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Kdyby/Events",
+                "reference": "e4fe5617f05273ba98bd94f4394eeef0c516a88e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/Kdyby/Events/archive/e4fe5617f05273ba98bd94f4394eeef0c516a88e.zip",
+                "reference": "e4fe5617f05273ba98bd94f4394eeef0c516a88e",
+                "shasum": ""
+            },
+            "require": {
+                "nette/nette": "@dev"
+            },
+            "require-dev": {
+                "nette/tester": "@dev"
+            },
+            "time": "2013-01-20 13:47:48",
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Kdyby\\Events\\": "src/"
+                },
+                "classmap": [
+                    "src/Kdyby/Events/exceptions.php"
+                ],
+                "files": [
+                    "src/Doctrine/compatibility.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0",
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Filip Procházka",
+                    "homepage": "http://filip-prochazka.com"
+                }
+            ],
+            "description": "Events for Nette Framework",
+            "homepage": "http://kdyby.org",
+            "keywords": [
+                "nette",
+                "kdyby"
+            ]
+        },
+        {
+            "name": "kdyby/fs",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Kdyby/Filesystem",
+                "reference": "d8c1d3f673cf7efdc328680badb3ccba301b5c59"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/Kdyby/Filesystem/archive/d8c1d3f673cf7efdc328680badb3ccba301b5c59.zip",
+                "reference": "d8c1d3f673cf7efdc328680badb3ccba301b5c59",
+                "shasum": ""
+            },
+            "require": {
+                "nette/nette": "@dev"
+            },
+            "require-dev": {
+                "nette/tester": "@dev"
+            },
+            "time": "2013-01-25 13:40:01",
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Kdyby\\Fs\\": "src/"
+                },
+                "classmap": [
+                    "src/Kdyby/Fs/exceptions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0",
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Filip Procházka",
+                    "homepage": "http://filip-prochazka.com"
+                }
+            ],
+            "description": "Filesystem helpers for Nette Framework",
+            "homepage": "http://kdyby.org",
+            "keywords": [
+                "filesystem",
+                "directory",
+                "nette",
+                "kdyby",
+                "fs"
+            ]
+        },
+        {
+            "name": "nette/nette",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "http://github.com/nette/nette",
+                "reference": "1ef0abfc8a3f8db7382248efa9a56152b3b67b39"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/nette/nette/archive/1ef0abfc8a3f8db7382248efa9a56152b3b67b39.zip",
+                "reference": "1ef0abfc8a3f8db7382248efa9a56152b3b67b39",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "ext-iconv": "*",
+                "ext-tokenizer": "*"
+            },
+            "require-dev": {
+                "nette/tester": "@dev"
+            },
+            "suggest": {
+                "ext-mbstring": "*",
+                "ext-pdo": "*",
+                "ext-memcache": "*",
+                "ext-gd": "*",
+                "ext-fileinfo": "*"
+            },
+            "time": "2013-01-22 17:52:40",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.1-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "Nette/loader.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0",
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "http://davidgrudl.com"
+                },
+                {
+                    "name": "Nette Community",
+                    "homepage": "http://nette.org/contributors"
+                }
+            ],
+            "description": "Nette Framework - innovative framework for fast and easy development of secured web applications in PHP. Write less, have cleaner code and your work will bring you joy.",
+            "homepage": "http://nette.org",
+            "keywords": [
+                "templating",
+                "framework",
+                "database",
+                "dbal",
+                "debugging",
+                "mvc",
+                "micro",
+                "Forms",
+                "latte",
+                "neon",
+                "mailing",
+                "images"
+            ]
+        },
+        {
+            "name": "symfony/console",
+            "version": "v2.1.7",
+            "target-dir": "Symfony/Component/Console",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Console",
+                "reference": "v2.1.7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/symfony/Console/archive/v2.1.7.zip",
+                "reference": "v2.1.7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "time": "2013-01-17 15:20:05",
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Console": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Console Component",
+            "homepage": "http://symfony.com"
+        }
+    ],
+    "packages-dev": null,
+    "aliases": [
+
+    ],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "hosiplan/nette-autowire-properties": 20,
+        "kdyby/bootstrap-form-renderer": 20,
+        "kdyby/doctrine": 20,
+        "kdyby/events": 20,
+        "kdyby/console": 20,
+        "nette/nette": 20,
+        "kdyby/fs": 20
+    }
+}
