@@ -71,7 +71,7 @@ abstract class BasePresenter extends Nette\Application\UI\Presenter
 	 */
 	public function checkRequirements($element)
 	{
-		$this->getUser()->protectElement($element);
+		//$this->getUser()->protectElement($element);
 	}
 
 }
