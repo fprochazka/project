@@ -24,6 +24,6 @@
 		"kdyby/events": "@dev",
 		"kdyby/console": "@dev",
 		"nette/nette": "@dev",
-		"kdyby/fs": "@dev"
+		"kdyby/filesystem": "@dev"
 	}
 }

@@ -1,5 +1,5 @@
 {
-    "hash": "b4ce612ac8167d06e88f6887de0f8232",
+    "hash": "062854de5a6ef68018628861895e6a20",
     "packages": [
         {
             "name": "doctrine/common",
@@ -449,17 +449,17 @@
             ]
         },
         {
-            "name": "kdyby/fs",
+            "name": "kdyby/filesystem",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Kdyby/Filesystem",
-                "reference": "d8c1d3f673cf7efdc328680badb3ccba301b5c59"
+                "reference": "v0.1.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/Kdyby/Filesystem/archive/d8c1d3f673cf7efdc328680badb3ccba301b5c59.zip",
-                "reference": "d8c1d3f673cf7efdc328680badb3ccba301b5c59",
+                "url": "https://api.github.com/repos/Kdyby/Filesystem/zipball/v0.1.0",
+                "reference": "v0.1.0",
                 "shasum": ""
             },
             "require": {
@@ -468,14 +468,14 @@
             "require-dev": {
                 "nette/tester": "@dev"
             },
-            "time": "2013-01-25 13:40:01",
+            "time": "2013-02-02 13:59:42",
             "type": "library",
             "autoload": {
                 "psr-0": {
-                    "Kdyby\\Fs\\": "src/"
+                    "Kdyby\\Filesystem\\": "src/"
                 },
                 "classmap": [
-                    "src/Kdyby/Fs/exceptions.php"
+                    "src/Kdyby/Filesystem/exceptions.php"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -629,6 +629,6 @@
         "kdyby/events": 20,
         "kdyby/console": 20,
         "nette/nette": 20,
-        "kdyby/fs": 20
+        "kdyby/filesystem": 20
     }
 }
