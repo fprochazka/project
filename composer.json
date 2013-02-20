@@ -25,5 +25,8 @@
 		"kdyby/console": "@dev",
 		"nette/nette": "@dev",
 		"kdyby/filesystem": "@dev"
+	},
+	"scripts": {
+		"post-install-cmd": [ "chmod 0777 -R app/temp/ app/log/" ]
 	}
 }
