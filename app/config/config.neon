@@ -1,74 +1,62 @@
-common:
-	parameters:
+parameters:
 
 
-	php:
-		date.timezone: Europe/Prague
-		# zlib.output_compression: yes
+php:
+	date.timezone: Europe/Prague
+	# zlib.output_compression: yes
 
 
-	nette:
-		application:
-			errorPresenter: Error
-			mapping:
-				*: App\*Module\*Presenter
+nette:
+	application:
+		errorPresenter: Error
+		mapping:
+			*: App\*Module\*Presenter
 
-		session:
-			expiration: 14 days
-
-
-	extensions:
-		twBootstrapRenderer: Kdyby\BootstrapFormRenderer\DI\RendererExtension
-		console: Kdyby\Console\DI\ConsoleExtension
-		events: Kdyby\Events\DI\EventsExtension
-		doctrine: Kdyby\Doctrine\DI\OrmExtension
+	session:
+		expiration: 14 days
 
 
-	services:
-#		user: App\User
-#		authenticator: @user
-		routerFactory: App\RouterFactory
-		router: @routerFactory::createRouter
+extensions:
+	annotations: Kdyby\Annotations\DI\AnnotationsExtension
+	console: Kdyby\Console\DI\ConsoleExtension
+	events: Kdyby\Events\DI\EventsExtension
+	doctrine: Kdyby\Doctrine\DI\OrmExtension
+	webloader: Damejidlo\DI\WebloaderExtension
 
 
-	factories:
+webloader:
+		css:
+			default:
+				files:
+					- %wwwDir%/css/style.css
+					- %wwwDir%/css/error.css
+					- %wwwDir%/css/nothing.css
+					- %wwwDir%/css/jquery.smartbanner.css
+
+		js:
+			default:
+				remoteFiles:
+					- "http://maps.google.com/maps/api/js?sensor=false"
+				files:
+					- %wwwDir%/js/jquery-1.10.2.min.js
+					- %wwwDir%/js/modernizr.js
+					- %wwwDir%/js/json2.js
+					- %wwwDir%/js/netteForms.js
+					- %wwwDir%/js/jquery.smartbanner.js
+					- %wwwDir%/js/nette.ajax.js
+					- %wwwDir%/js/jquery.placeholder.js
+					- %wwwDir%/js/jquery.zclip.min.js
+					- %wwwDir%/js/mySmartbanner.js
+					- %wwwDir%/js/filter.js
+					- %wwwDir%/js/jquery.autoellipsis-1.0.10.min.js
+					- %wwwDir%/js/jquery.cookie.js
+					- %wwwDir%/js/global.js
+					- %wwwDir%/js/typeahead.js
+					- %wwwDir%/js/textextjs.js
+					- %wwwDir%/js/jcarousellite_1.0.1.min.js
 
 
-	doctrine:
-		host: 127.0.0.1
-		user: root
-		password: heslo
-		dbname: app
 
-
-
-production < common:
-	nette:
-		debugger:
-			email: filip@prochazka.su
-			strictMode: TRUE
-
-
-
-development < common:
-	nette:
-		application:
-			debugger: true
-
-		routing:
-			debugger: true
-
-		security:
-			debugger: true
-
-		container:
-			debugger: true
-
-		debugger:
-			strictMode: TRUE
-			browser: google-chrome
-
-#		database:
-#			dsn: 'mysql:host=127.0.0.1;dbname=visual-deploy'
-#			user: root
-#			password: heslo
+services:
+	- App\RouterFactory
+	router: @App\RouterFactory::createRouter

@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Kdyby\Autowired\AutowireComponentFactories;
 use Nette;
 
 
@@ -17,6 +18,8 @@ use Nette;
  */
 abstract class BaseControl extends Nette\Application\UI\Control
 {
+	use AutowireComponentFactories;
+
 
 	/**
 	 */
@@ -60,16 +63,6 @@ abstract class BaseControl extends Nette\Application\UI\Control
 		$refl = $this->getReflection();
 		$file = dirname($refl->getFileName()) . '/' . lcfirst($refl->getShortName()) . '.latte';
 		return file_exists($file) ? $file : NULL;
-	}
-
-
-
-	/**
-	 * @param \Reflector $element
-	 */
-	public function checkRequirements($element)
-	{
-		$this->getPresenter()->getUser()->protectElement($element);
 	}
 
 }

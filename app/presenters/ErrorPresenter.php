@@ -2,9 +2,8 @@
 
 namespace App;
 
-use Nette;
-use Nette\Diagnostics\Debugger;
-
+use Nette,
+	Nette\Diagnostics\Debugger;
 
 
 /**
