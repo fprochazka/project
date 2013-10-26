@@ -21,40 +21,35 @@ extensions:
 	console: Kdyby\Console\DI\ConsoleExtension
 	events: Kdyby\Events\DI\EventsExtension
 	doctrine: Kdyby\Doctrine\DI\OrmExtension
-	webloader: Damejidlo\DI\WebloaderExtension
+	webloader: App\WebloaderExtension
 
 
 webloader:
 		css:
 			default:
 				files:
-					- %wwwDir%/css/style.css
-					- %wwwDir%/css/error.css
-					- %wwwDir%/css/nothing.css
-					- %wwwDir%/css/jquery.smartbanner.css
+					- %wwwDir%/css/bootstrap.css
+					- %wwwDir%/css/bootstrap-theme.css
+					- %wwwDir%/css/screen.css
+
+			print:
+				files:
+					- %wwwDir%/css/bootstrap.css
+					- %wwwDir%/css/bootstrap-theme.css
+					- %wwwDir%/css/print.css
 
 		js:
 			default:
 				remoteFiles:
-					- "http://maps.google.com/maps/api/js?sensor=false"
+					- http://jush.sourceforge.net/jush.js
 				files:
-					- %wwwDir%/js/jquery-1.10.2.min.js
+					- %wwwDir%/js/jquery.js
 					- %wwwDir%/js/modernizr.js
-					- %wwwDir%/js/json2.js
+					- %wwwDir%/js/bootstrap.js
+					- %wwwDir%/js/html5.js
 					- %wwwDir%/js/netteForms.js
-					- %wwwDir%/js/jquery.smartbanner.js
 					- %wwwDir%/js/nette.ajax.js
-					- %wwwDir%/js/jquery.placeholder.js
-					- %wwwDir%/js/jquery.zclip.min.js
-					- %wwwDir%/js/mySmartbanner.js
-					- %wwwDir%/js/filter.js
-					- %wwwDir%/js/jquery.autoellipsis-1.0.10.min.js
-					- %wwwDir%/js/jquery.cookie.js
-					- %wwwDir%/js/global.js
-					- %wwwDir%/js/typeahead.js
-					- %wwwDir%/js/textextjs.js
-					- %wwwDir%/js/jcarousellite_1.0.1.min.js
-
+					- %wwwDir%/js/main.js
 
 
 services:

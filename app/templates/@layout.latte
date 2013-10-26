@@ -13,8 +13,8 @@
 
     <title>{#title|striptags|strip|trim}Nette Framework application{/#}</title>
 
-	<link rel="stylesheet" media="screen,projection,tv" href="{$basePath}/css/screen.css">
-	<link rel="stylesheet" media="print" href="{$basePath}/css/print.css">
+	{control cssScreen}
+	{control cssPrint}
 	<link rel="shortcut icon" href="{$basePath}/favicon.ico">
 	{#head}{/#}
 </head>
@@ -26,10 +26,6 @@
 
 	{include #content}
 
-	{#scripts}
-	<script src="{$basePath}/js/jquery.js"></script>
-	<script src="{$basePath}/js/netteForms.js"></script>
-	<script src="{$basePath}/js/main.js"></script>
-	{/#}
+	{#scripts}{control js}{/#}
 </body>
 </html>
