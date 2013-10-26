@@ -1,0 +1,4 @@
+doctrine:
+	user: root
+	password: heslo
+	dbname: test
